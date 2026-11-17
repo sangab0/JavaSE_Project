@@ -31,7 +31,7 @@ public class AccountTest {
 		} catch (InsufficientBalanceException e) { 
 			// 부모 클래스인 Exception을 작성해도 예외 처리는 가능함
 		    // 하지만 자식 클래스인 InsufficientBalanceException을 사용하면 정확한 원인(잔액 부족)을 구분해 처리할 수 있음
-			System.out.println("Error 메시지 = " + e.getMessage());
+			System.out.println("Error 메시지 = " + e.getMessage() + e.getCurrentBalance());
 		}
 	}
 }
