@@ -1,6 +1,6 @@
 package workshop.account.entity;
 
-public class Account {
+public class Account extends Object {
 	private String custId; // 고객번호
 	private String acctId; // 계좌번호 
 	private int balance; // 잔액 
@@ -11,7 +11,6 @@ public class Account {
 	
 	// 생성자 선언 
 	public Account(String custId, String acctId, int balance) {
-		super();
 		this.custId = custId;
 		this.acctId = acctId;
 		this.balance = balance;
@@ -48,4 +47,15 @@ public class Account {
 	public void withdraw(int amount) {
 		this.balance -= amount;
 	}
+
+	/**
+	 * Object 클래스의 toString() 재정의
+	 * 계좌 정보(고객ID, 계좌번호, 잔액)를 문자열로 반환
+	 */
+	@Override
+	public String toString() {
+		return "Account [custId=" + custId + ", acctId=" + acctId + ", balance=" + balance + "]";
+	}
+	
+	
 }
