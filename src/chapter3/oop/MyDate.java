@@ -4,6 +4,7 @@ public class MyDate {
 	private int year;
 	private int month;
 	private int day;
+
 	
 	//default constructor
 	public MyDate() {
@@ -12,7 +13,7 @@ public class MyDate {
 	//constructor overloading (생성자 중복정의)
 	public MyDate(int year, int month, int day) {
 		this.year = year;
-		//this.month = month;
+//		this.month = month;
 		setMonth(month);
 		this.day = day;
 	}
