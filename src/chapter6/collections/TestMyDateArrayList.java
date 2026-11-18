@@ -9,11 +9,22 @@ public class TestMyDateArrayList {
 
 	public static void main(String[] args) {
 		//1. MyDate 타입의 객체만 담을 수 있는 ArrayList 객체를 생성하세요
-		ArrayList list1 = new ArrayList(); 
+		ArrayList list1 = new ArrayList();
+		list1.add(new String("hello"));
+		list1.add(new Integer(10));
 		
-		//Generics
+		for(int i = 0;i < list1.size(); i++) {
+			String value = (String)list1.get(i);
+		}
+		
+		ArrayList<String> list2 = new ArrayList<>();
+		list2.add(new String("aaa"));
+		//list2.add(new Integer(10));
+		
+		//Generics 
 		ArrayList<MyDate> list3 = new ArrayList<>(); //(1)
-		List<MyDate> list = new ArrayList<>(); // (2)
+		List<MyDate> list = new ArrayList<>();  //(2)
+		// 2번이 확장성있음 List가 상속해준 메소드들만 접근 가능 하지만 1은 호출할 때 범위가 더 넓은 
 		
 		//2. fillArrayList() 메서드를 호출하세요
 		fillArrayList(list);
